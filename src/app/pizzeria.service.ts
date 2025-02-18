@@ -21,7 +21,16 @@ pedidos: Pedido[] = [];
     return this.pedidos;
   }
 
+  eliminarPedido(pedido: Pedido):void{
+    const index = this.pedidos.indexOf(pedido);
+    if(index > -1) {
+      this.pedidos.splice(index,1);
+    }
+  }
+
 }
+
+
 
 
 export interface Pedido{

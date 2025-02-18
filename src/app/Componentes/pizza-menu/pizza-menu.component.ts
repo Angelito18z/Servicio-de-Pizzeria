@@ -35,11 +35,13 @@ export class PizzaMenuComponent implements OnInit {
       this.mostrarToast("Selecciona un sabor");
       return;
     }
-
-    
     this.pizzeria.generarPedido({ casa, pizza });
     console.log("Pedidos: ", this.pizzeria.getPedidos());
     this.pedidos = this.pizzeria.getPedidos();
+  }
+
+  eliminarPedido(pedido : Pedido){
+    this.pizzeria.eliminarPedido(pedido);
   }
 
   getPedidosDeLaCasa() {
