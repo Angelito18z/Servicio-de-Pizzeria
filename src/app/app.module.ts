@@ -6,6 +6,8 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PizzaMenuComponent } from './Componentes/pizza-menu/pizza-menu.component';
+import { ComponentesModule } from './Componentes/componentes.module';
 
 @NgModule({
   declarations: [AppComponent],

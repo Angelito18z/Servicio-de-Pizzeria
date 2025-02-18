@@ -1,0 +1,18 @@
+<ion-item>
+  <ion-select (ionChange)="seleccionarSabor($event)" [value]="saborSeleccionado" label="Selecciona un sabor" placeholder="Sabor">
+    <ion-select-option value="Pepperoni">Pepperoni</ion-select-option>
+    <ion-select-option value="Quesos">Quesos</ion-select-option>
+    <ion-select-option value="Hawaina">Hawaina</ion-select-option>
+    <ion-select-option value="Vegetariana">Vegetariana</ion-select-option>
+    <ion-select-option value="Margarita">Margarita</ion-select-option>
+  </ion-select>
+</ion-item>
+
+<ion-button (click)="generarPedido(casa, saborSeleccionado)">Realizar Pedido</ion-button>
+
+<ion-list>
+  <ion-item *ngFor="let pedido of getPedidosDeLaCasa()">
+    <ion-label>{{ pedido.pizza }}</ion-label>
+    <small>{{ pedido.casa }}</small>
+  </ion-item>
+</ion-list>
